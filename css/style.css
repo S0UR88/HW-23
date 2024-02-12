@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Roboto&display=swap');
+
+/* COMMON CSS START */
+
+:root {
+    --primaryfont: "Josefin Sans", sans-serif;
+    --secondaryfont: "Roboto", sans-serif;
+    --text-color: #11161e;
+	--darkcolor: #151a32;
+	--comon-colot: #fff;
+	--primarycolor: #ff6f61;
+	--paragraph-color: #444;
+	--secondaryprimarycolor: #ff5645;
+	--background-color: #f1f1f1;
+	--bg: #f1f3f4;
+	--black: #000;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul , ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,ul,ol,p,span{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:var(--primaryfont);
+}
+
+.Headline h4{
+font-weight: 700;
+font-size: 36px;
+line-height: 128%;
+text-align: center;
+color: var(--text-color);
+}
+
+.allbutton{    
+padding: 13px 38px;    
+display:inline-block;    
+background-color: var(--primarycolor);    
+color: var(--comon-colot);
+font-weight: 600;
+font-size: 18px;
+line-height: 167%;
+text-align: center;
+}
+
+/* common product start */
+
+.productSlider{
+    margin-top: 24px;
+
+}
+
+.productSlider .product{
+    padding: 0px 12px;
+}
+
+.product .productdetails{
+    text-align: center;
+    padding: 24px 0px 26px;
+    border: 1px solid var(--background-color);
+    border-top: none;
+}
+
+.product .productdetails p{
+font-weight: 400;
+font-size: 16px;
+line-height: 162%;
+color: var(--paragraph-color);
+}
+
+.product .productdetails h3{
+font-weight: 600;
+font-size: 18px;
+line-height: 156%;
+color: var(--text-color);
+margin-top: 5px;
+}
+
+.product .productdetails .rating {
+    font-size: 14px;
+    color: var(--primarycolor);
+    display: flex;
+    justify-content: center;
+    margin-top: 11px;
+}
+
+.product .productimg{
+    position: relative;
+}
+
+.product .productimg .offerlabel{
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    padding: 0px 8px;
+    background-color: var(--primarycolor);
+    color: var(--comon-colot);
+    border-radius:13px 0px 0px 13px;
+    transform: rotate(-90deg);
+}
+
+.product .productimg .overlay{
+    position: absolute;
+    right: 17px;
+    top: 44px;
+}
+
+.product .productimg .overlay a{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color:var(--darkcolor);
+    text-align: center;
+    line-height: 40px;
+    background-color:var(--comon-colot);
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.product .productimg .overlay li{
+    transform: translateX(-50px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.product .productimg .overlay li:nth-child(2){
+    transition-delay: 0.15s;
+}
+
+.product .productimg .overlay li:nth-child(3){
+    transition-delay: 0.3s;
+}
+
+.product .productimg .overlay li:nth-child(4){
+    transition-delay: 0.45s;
+}
+
+
+.product:hover .productimg .overlay li{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.product .productimg .overlay a:hover{
+    background-color: var(--primarycolor);
+    color: var(--comon-colot);
+    transition: 0.3s;
+}
+
+
+
+/* COMMON CSS END */
+
+/* Navber start */
+
+#Desktopmenu ul li a{
+font-weight: 400;
+font-size: 16px;
+line-height: 162%;
+color: var(--text-color);
+padding: 37px 21px 40px;
+display: block;
+
+}
+
+#Desktopmenu ul li:hover a{
+    color: var(--primarycolor);
+    transition: 0.3s;
+}
+
+#Desktopmenu ul li .submenu{
+    position:absolute;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color:var(--comon-colot);
+   
+}
+
+#Desktopmenu ul li{
+    position: relative;
+}
+
+#Desktopmenu ul li .dropdownarrow i{
+    margin-left:5px;
+
+}
+
+#Desktopmenu ul li  i:hover{
+    transform:rotate(180deg);
+    transition: 0.2s;
+    
+}
+
+#Desktopmenu ul li .submenu li a{
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    color:var(--text-color);
+}
+
+#Desktopmenu ul li .submenu li a:hover{
+    color: var(--primarycolor);
+}
+
+
+#Desktopmenu ul li:hover .submenu{
+    margin-top: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+    position: absolute;
+
+}
+
+header nav .links li a{
+    color: var(--darkcolor);
+    font-size: 18px;
+    margin-right: 20px;
+    position: relative;
+
+}
+
+header nav .links li:hover a{
+    color: var(--primarycolor);
+    transition: 0.3s;
+}
+
+
+header nav .links li a span.cardcounter{
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-color: var(--primarycolor);
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--comon-colot);
+    position: absolute;
+    top: -5px;
+    right: -8px;
+}
+
+/* resonsive navber */
+
+.smallnav{
+    padding: 15px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.smallnav .menubuttontoggler{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+
+/* Navber end */
+
+/* offcanvas */
+
+.offcanvas-header input{
+    width: 80%;
+    height: 35px;
+    border: none;
+    border: 1px solid #444;
+    padding-left: 10px;
+    border-radius: 5px;
+    
+}
+
+header .smallmenu li a{
+    color: var(--text-color);
+    border-bottom: 1px solid #ccc;
+    display: block;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-left: 10px;
+
+}
+
+header .smallmenu li:last-child a{
+    border: none;
+}
+
+header .smallmenu li:hover > a{
+    color: var(--primarycolor);
+    transition: 0.3s;
+}
+
+header .smallmenu .submenu{
+    position: relative !important;
+    inset: auto !important;
+    transform: translate3d(0px, 0px, 0px) !important;
+    border-radius: 0;
+    
+}
+
+header .smallmenu .submenu li:hover > a{
+    color: var(--primarycolor);
+    transition: 0.3s;
+}
+
+/* offcanvas end */
+
+/* banner */
+
+#banner{
+    position: relative;
+}
+
+#banner .bannerSlider .slide{
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner .bannerSlider .slide h4{
+font-weight: 600;
+font-size: 18px;
+line-height: 156%;
+color: #1d1d1d;
+}
+
+#banner .bannerSlider .slide h2{
+font-weight: 700;
+font-size: 64px;
+line-height: 116%;
+color: #1d1d1d;
+margin: 14px 0px 16px 0px;
+}
+
+#banner .bannerSlider .slide p{
+font-family: var(--secondaryfont);
+font-weight: 400;
+font-size: 16px;
+line-height: 175%;
+color: #1d1d1d;
+margin-bottom: 29px;
+}
+
+.bannerDots{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 200px;
+}
+
+.bannerDots li button{
+    width: 11px;
+    height: 6px;
+    background-color: var(--comon-colot);
+    border-radius: 5px;
+    color: transparent;
+    border: none;
+    margin-right: 5.45px;
+    transition: 0.3s ease;
+}
+
+.bannerDots li.slick-active button{
+    width: 29px;
+    background-color: var(--primarycolor);
+}
+
+
+/* banner end */
+
+/* beauty part start */
+
+#beauty{
+    margin-top: 84px;
+}
+
+
+#beauty .smallpart .cream{
+    margin-bottom: 24px;
+    position: relative;
+    
+}
+
+#beauty .smallpart .perfume{
+    position: relative;
+}
+
+#beauty .bigpart .soup{
+    position: relative;
+}
+
+
+#beauty .smallpart .overlay{
+    position: absolute;
+    background-color:#11161e6e;
+    text-align: center;
+    top: 37%;
+    left: 110px;
+    inset: 20px 18px;
+    padding: 89px 0px;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 50px;
+    color: var(--comon-colot);
+    
+}
+
+#beauty .bigpart .overlay{
+    position: absolute;
+    background-color:#11161e6e;
+    text-align: center;
+    top: 37%;
+    left: 110px;
+    inset:25px 0px 25px 38px;
+    padding: 240px 0px;
+    opacity: 0.4;
+    visibility: hidden;
+    margin-top: 50px;
+    color: var(--comon-colot);
+    
+}
+
+#beauty .cream:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    margin-top: 0px;
+
+}
+
+#beauty .perfume:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+    transition:0.5s;
+    margin-top: 0px;
+
+}
+
+#beauty .soup:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    margin-top: 0px;
+
+}
+
+
+#beauty .container .overlay h6{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 133%;
+    color: var(--comon-colot);
+    padding-bottom: 12px;
+}
+
+#beauty .container .overlay a{
+font-weight: 600;
+font-size: 16px;
+line-height: 175%;
+color: var(--comon-colot);
+}
+
+
+/* beauty part end */
+
+/* arrival part start */
+
+#arrival{
+    margin-top: 112px;
+    position: relative;
+}
+
+#arrival .arrow .left{
+        position: absolute;
+        width: 30px;
+        height: 50px;
+        line-height: 50px;
+        background-color:#151a3281;
+        color:var(--comon-colot);
+        text-align: center;
+        top: 48%;
+        cursor: pointer;
+}
+
+.left{
+    left: 10%;
+}
+
+
+#arrival .arrow .right{
+        position: absolute;
+        width: 30px;
+        height: 50px;
+        line-height: 50px;
+        background-color:#151a3281;
+        color:var(--comon-colot);
+        text-align: center;
+        top: 48%;
+        cursor: pointer;
+}
+
+.right{
+    right: 10%;
+}
+
+
+/* arrival part end */
